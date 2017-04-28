@@ -27,6 +27,8 @@ int main() {
 			cout << "La respuesta es de: " << respF << endl;
 		} else {
 			int x1, x2, x3, x4, y1, y2, y3, y4;
+			double h1,h2,h3,h4, HB;
+
 			cout << "Ingrese x1:" << endl;
 			cin >> x1;
 			cout << "Ingrese y1:" << endl;
@@ -34,7 +36,7 @@ int main() {
 
 			cout << "Ingrese x2:" << endl;
 			cin >> x2;
-			while (x2 == x1) {
+			while (x2 == x1 || x2 < x1) {
 				cout << "Numero invalido, ingrese x2 de nuevo:" << endl;
 				cin >> x2;
 			}
@@ -53,7 +55,7 @@ int main() {
 			}
 			cout << "Ingrese y3" << endl;
 			cin >> y3;
-			while (y3 == y1 || y3 == y2) {
+			while ((y3 == y1 || y3 == y2) && (y3 < y1 || y3 < y2)) {
 				cout << "Numero invalido, ingrese y3 de nuevo:" << endl;
 				cin >> y3;
 			}
@@ -66,10 +68,16 @@ int main() {
 			}
 			cout << "Ingrese y4" << endl;
 			cin >> y4;
-			while (y4 == y1 || y4 == y2 || y4 == y3) {
+			while ((y4 == y1 || y4 == y2 || y4 == y3) && (y4 < y1 || y4 < y2)) {
 				cout << "Numero invalido, ingrese y4 de nuevo:" << endl;
 				cin >> y4;
 			}
+
+			h1 = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+			h2 = sqrt(pow(x3 - x2, 2) + pow(y3 - y2, 2));
+			h3 = sqrt(pow(x4 - x3, 2) + pow(y4 - y3, 2));
+			h4 = sqrt(pow(x1 - x4, 2) + pow(y1 - y4, 2));
+			HB = sqrt(pow(x4 - x2, 2) + pow(y4 - y2, 2));
 		}
 	}
 	return 0;
