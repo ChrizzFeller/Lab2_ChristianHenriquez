@@ -27,7 +27,7 @@ int main() {
 			cout << "La respuesta es de: " << respF << endl;
 		} else {
 			int x1, x2, x3, x4, y1, y2, y3, y4;
-			double h1,h2,h3,h4, HB;
+			double h1,h2,h3,h4, HB, ha1, hb1, hc1, ha2, hb2, hc2, semip;
 
 			cout << "Ingrese x1:" << endl;
 			cin >> x1;
@@ -78,6 +78,14 @@ int main() {
 			h3 = sqrt(pow(x4 - x3, 2) + pow(y4 - y3, 2));
 			h4 = sqrt(pow(x1 - x4, 2) + pow(y1 - y4, 2));
 			HB = sqrt(pow(x4 - x2, 2) + pow(y4 - y2, 2));
+
+			double a = h4, b = h1, c = HB;
+
+			semip = a + b + c / 2;
+
+			ha1 = (2 / a)(sqrt(semip * (semip - a) * (semip - b) * (semip - c)));
+			hb1 = (2 / b)(sqrt(semip * (semip - a) * (semip - b) * (semip - c)));
+			hc1 = (2 / c)(sqrt(semip * (semip - a) * (semip - b) * (semip - c)));
 		}
 	}
 	return 0;
