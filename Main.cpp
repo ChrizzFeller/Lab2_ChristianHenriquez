@@ -7,9 +7,8 @@ int menu();
 int factorial(int);
 
 int main() {
-	int resp;
-	while (resp =! 3) {
-		resp = menu();
+	int resp = 1;
+	while (resp != 3) {
 		if (resp == 1) {
 			int resp2, numdeabajo = 1, cont2, poder = 1;
 			double respTemp, respF = 0;
@@ -25,7 +24,7 @@ int main() {
 			}
 			respF = respF + 1;
 			cout << "La respuesta es de: " << respF << endl;
-		} else {
+		} else if(resp == 2){
 			int x1, x2, x3, x4, y1, y2, y3, y4;
 			double h1,h2,h3,h4, HB, ha1, hb1, hc1, ha2, hb2, hc2, semip1, semip2, peri1, peri2, Area;
 
@@ -81,7 +80,7 @@ int main() {
 
 			double a = h4, b = h1, c = HB;
 
-			semip1 = a + b + c / 2;
+			semip1 = (a + b + c) / 2;
 			peri1 = a + b + c;
 
 			ha1 = (2 / a) * (sqrt(semip1 * (semip1 - a) * (semip1 - b) * (semip1 - c)));
@@ -91,7 +90,7 @@ int main() {
 			a = h3;
 			b = h2;
 
-			semip2 = a + b + c / 2;
+			semip2 = (a + b + c) / 2;
 			peri2 = a + b + c;
 
 			ha2 = (2 / a) * (sqrt(semip2 * (semip2 - a) * (semip2 - b) * (semip2 - c)));
@@ -132,7 +131,9 @@ int main() {
 			cout << "Altura 3: " << hc2 << endl;
 			cout << endl;
 			cout << "El area es de: " << Area << endl;
+		} else {
 		}
+		resp = menu();
 	}
 	return 0;
 }
