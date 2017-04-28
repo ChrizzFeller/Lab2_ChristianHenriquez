@@ -27,7 +27,7 @@ int main() {
 			cout << "La respuesta es de: " << respF << endl;
 		} else {
 			int x1, x2, x3, x4, y1, y2, y3, y4;
-			double h1,h2,h3,h4, HB, ha1, hb1, hc1, ha2, hb2, hc2, semip;
+			double h1,h2,h3,h4, HB, ha1, hb1, hc1, ha2, hb2, hc2, semip, Area;
 
 			cout << "Ingrese x1:" << endl;
 			cin >> x1;
@@ -95,6 +95,9 @@ int main() {
 			ha2 = (2 / a) * (sqrt(semip * (semip - a) * (semip - b) * (semip - c)));
 			hb2 = (2 / b) * (sqrt(semip * (semip - a) * (semip - b) * (semip - c)));
 			hc2 = (2 / c) * (sqrt(semip * (semip - a) * (semip - b) * (semip - c)));
+
+			Area = ((HB * hc1) / 2) + ((HB * hc2) / 2);
+
 		}
 	}
 	return 0;
