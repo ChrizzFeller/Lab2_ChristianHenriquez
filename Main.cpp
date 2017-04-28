@@ -35,40 +35,37 @@ int main() {
 
 			cout << "Ingrese x2:" << endl;
 			cin >> x2;
-			while (x2 == x1 || x2 < x1) {
-				cout << "Numero invalido, ingrese x2 de nuevo:" << endl;
-				cin >> x2;
-			}
 			cout << "Ingrese y2" << endl;
 			cin >> y2;
-			while (y2 == y1) {
-				cout << "Numero invalido, ingrese y2 de nuevo:" << endl;
+			while (x2 == x1 && y2 == y1) {
+				cout << "Numeros invalidos, ingrese numeros de nuevo:" << endl;
+				cout << "Ingrese x2:" << endl;
+				cin >> x2;
+				cout << "Ingrese y2" << endl;
 				cin >> y2;
 			}
 
 			cout << "Ingrese x3:" << endl;
 			cin >> x3;
-			while (x3 == x1 || x3 == x2) {
-				cout << "Numero invalido, ingrese x3 de nuevo:" << endl;
-				cin >> x3;
-			}
 			cout << "Ingrese y3" << endl;
 			cin >> y3;
-			while ((y3 == y1 || y3 == y2) && (y3 < y1 || y3 < y2)) {
-				cout << "Numero invalido, ingrese y3 de nuevo:" << endl;
+			while (((x3 == x1 && y3 == y1) || (x3 == x2 && y3 == y2)) || (y3 < y2 || y3 < y1)) {
+				cout << "Numeros invalidos, ingrese numeros de nuevo:" << endl;
+				cout << "Ingrese x3:" << endl;
+				cin >> x3;
+				cout << "Ingrese y3" << endl;
 				cin >> y3;
 			}
 
 			cout << "Ingrese x4:" << endl;
 			cin >> x4;
-			while (x4 == x1 || x4 == x2 || x4 == x3) {
-				cout << "Numero invalido, ingrese x4 de nuevo:" << endl;
-				cin >> x4;
-			}
 			cout << "Ingrese y4" << endl;
 			cin >> y4;
-			while ((y4 == y1 || y4 == y2 || y4 == y3) && (y4 < y1 || y4 < y2)) {
-				cout << "Numero invalido, ingrese y4 de nuevo:" << endl;
+			while (((x4 == x1 && y4 == y1) || (x4 == x2 && y4 == y2) || (x4 == x3 && y4 == y3)) || (y4 < y2 || y4 < y2)) {
+				cout << "Numeros invalidos, ingrese numeros de nuevo:" << endl;
+				cout << "Ingrese x4:" << endl;
+				cin >> x4;
+				cout << "Ingrese y4" << endl;
 				cin >> y4;
 			}
 
