@@ -27,7 +27,7 @@ int main() {
 			cout << "La respuesta es de: " << respF << endl;
 		} else {
 			int x1, x2, x3, x4, y1, y2, y3, y4;
-			double h1,h2,h3,h4, HB, ha1, hb1, hc1, ha2, hb2, hc2, semip, Area;
+			double h1,h2,h3,h4, HB, ha1, hb1, hc1, ha2, hb2, hc2, semip1, semip2, peri1, peri2, Area;
 
 			cout << "Ingrese x1:" << endl;
 			cin >> x1;
@@ -81,23 +81,57 @@ int main() {
 
 			double a = h4, b = h1, c = HB;
 
-			semip = a + b + c / 2;
+			semip1 = a + b + c / 2;
+			peri1 = a + b + c;
 
-			ha1 = (2 / a) * (sqrt(semip * (semip - a) * (semip - b) * (semip - c)));
-			hb1 = (2 / b) * (sqrt(semip * (semip - a) * (semip - b) * (semip - c)));
-			hc1 = (2 / c) * (sqrt(semip * (semip - a) * (semip - b) * (semip - c)));
+			ha1 = (2 / a) * (sqrt(semip1 * (semip1 - a) * (semip1 - b) * (semip1 - c)));
+			hb1 = (2 / b) * (sqrt(semip1 * (semip1 - a) * (semip1 - b) * (semip1 - c)));
+			hc1 = (2 / c) * (sqrt(semip1 * (semip1 - a) * (semip1 - b) * (semip1 - c)));
 
 			a = h3;
 			b = h2;
 
-			semip = a + b + c / 2;
+			semip2 = a + b + c / 2;
+			peri2 = a + b + c;
 
-			ha2 = (2 / a) * (sqrt(semip * (semip - a) * (semip - b) * (semip - c)));
-			hb2 = (2 / b) * (sqrt(semip * (semip - a) * (semip - b) * (semip - c)));
-			hc2 = (2 / c) * (sqrt(semip * (semip - a) * (semip - b) * (semip - c)));
+			ha2 = (2 / a) * (sqrt(semip2 * (semip2 - a) * (semip2 - b) * (semip2 - c)));
+			hb2 = (2 / b) * (sqrt(semip2 * (semip2 - a) * (semip2 - b) * (semip2 - c)));
+			hc2 = (2 / c) * (sqrt(semip2 * (semip2 - a) * (semip2 - b) * (semip2 - c)));
 
 			Area = ((HB * hc1) / 2) + ((HB * hc2) / 2);
 
+			cout << "Los lados del trapeziode miden: " << endl;
+			cout << "Lado1: " << h1 << endl;
+			cout << "Lado2: " << h2 << endl;
+			cout << "Lado3: " << h3 << endl;
+			cout << "Lado4: " << h4 << endl;
+			cout << endl;
+			cout << "Los lados del primer triangulo son: " << endl;
+			cout << "Lado1: " << ha1 << endl;
+			cout << "Lado2: " << hb1 << endl;
+			cout << "Lado3: " << hc1 << endl;
+			cout << endl;
+			cout << "Los lados del segundo triangulo son: " << endl;
+			cout << "Lado1: " << ha2 << endl;
+			cout << "Lado2: " << hb2 << endl;
+			cout << "Lado3: " << hc2 << endl;
+			cout << endl;
+			cout << "Semiperimetro triangulo 1: " << semip1 << endl;
+			cout << "Semiperimetro triangulo 2: " << semip2 << endl;
+			cout << "Perimetro triangulo 1: " << peri1 << endl;
+			cout << "Perimetro triangulo 2: " << peri2 << endl;
+			cout << endl;
+			cout << "Las alturas del triangulo 1 son: " << endl;
+			cout << "Altura 1: " << ha1 << endl;
+			cout << "Altura 2: " << hb1 << endl;
+			cout << "Altura 3: " << hc1 << endl;
+			cout << endl;
+			cout << "Las alturas del triangulo 2 son: " << endl;
+			cout << "Altura 1: " << ha2 << endl;
+			cout << "Altura 2: " << hb2 << endl;
+			cout << "Altura 3: " << hc2 << endl;
+			cout << endl;
+			cout << "El area es de: " << Area << endl;
 		}
 	}
 	return 0;
