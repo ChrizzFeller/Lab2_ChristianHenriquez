@@ -83,9 +83,18 @@ int main() {
 
 			semip = a + b + c / 2;
 
-			ha1 = (2 / a)(sqrt(semip * (semip - a) * (semip - b) * (semip - c)));
-			hb1 = (2 / b)(sqrt(semip * (semip - a) * (semip - b) * (semip - c)));
-			hc1 = (2 / c)(sqrt(semip * (semip - a) * (semip - b) * (semip - c)));
+			ha1 = (2 / a) * (sqrt(semip * (semip - a) * (semip - b) * (semip - c)));
+			hb1 = (2 / b) * (sqrt(semip * (semip - a) * (semip - b) * (semip - c)));
+			hc1 = (2 / c) * (sqrt(semip * (semip - a) * (semip - b) * (semip - c)));
+
+			a = h3;
+			b = h2;
+
+			semip = a + b + c / 2;
+
+			ha2 = (2 / a) * (sqrt(semip * (semip - a) * (semip - b) * (semip - c)));
+			hb2 = (2 / b) * (sqrt(semip * (semip - a) * (semip - b) * (semip - c)));
+			hc2 = (2 / c) * (sqrt(semip * (semip - a) * (semip - b) * (semip - c)));
 		}
 	}
 	return 0;
