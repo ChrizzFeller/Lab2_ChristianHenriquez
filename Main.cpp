@@ -7,7 +7,7 @@ int menu();
 int factorial(int);
 
 int main() {
-	int resp = 1;
+	int resp = menu();
 	while (resp != 3) {
 		if (resp == 1) {
 			int resp2, numdeabajo = 1, cont2, poder = 1;
@@ -133,6 +133,7 @@ int main() {
 			cout << "El area es de: " << Area << endl;
 		} else {
 		}
+		cout << endl;
 		resp = menu();
 	}
 	return 0;
